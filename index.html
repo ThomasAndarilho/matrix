@@ -6,6 +6,7 @@
             // Initialising the canvas
             var canvas = document.querySelector('canvas'),
                 ctx = canvas.getContext('2d');
+                ctx.font = '100px serif';
             // Setting the width and height of the canvas
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -13,7 +14,7 @@
             var letters = 'A昨B0C夜D1EのF3GコH3IンJ4KサL5MN6OトP7QはR8S最T9U高VでXしYたWZ';
             letters = letters.split('');
             // Setting up the columns
-            var fontSize = 12,
+            var fontSize = 20,
                 columns = canvas.width / fontSize;
             // Setting up the drops
             var drops = [];
@@ -22,6 +23,7 @@
             }
             // Setting up the draw function
             function draw() {
+            ctx.font = '18px monospace';
             ctx.fillStyle = 'rgba(0, 0, 0, .1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             for (var i = 0; i < drops.length; i++) {
@@ -35,7 +37,7 @@
             }
             }
             // Loop the animation
-            setInterval(draw, 90);
+            setInterval(draw, 100);
     }
     </script>
     <style type="text/css">
